@@ -4,11 +4,15 @@
 AES (Advanced Encryption Standard) is a widely-used symmetric encryption algorithm. It consists of several key steps for encryption, as well as their inverse operations for decryption.
 
 ## Encryption Operations
+![Example Image0](Images/AESalgo.png)
+
 The encryption operations include:
 - **Add Round Key**: Combining data with a specific round key using an XOR operation.
 - **Substitution of byte**: Substituting each data byte using an S-Box substitution table.
 - **Shift Rows**: Shifting bytes in each row of the data state.
 - **Mix Columns**: Mixing bytes in each column of the data state through matrix multiplication.
+
+
 
 ## Decryption Operations
 The inverse operations include:
@@ -24,14 +28,14 @@ The operations were implemented in VHDL as separate components. A multiplexer an
 
 ## Inversion Countermeasure
 To disrupt power analysis attacks, two inverter blocks were added after each encryption or decryption operation. This introduces additional noise in power consumption without affecting the final result.
-![Example Image](Images.jpg)
+![Example Image1](Images/l'ajoutdedeuxinverseursdansdec.png)
 ## Code Organization
 The VHDL code is organized into two distinct files for encryption and decryption. 
 
 ## Verification
 Code validity was verified through simulation on Modelsim, using a test bench with 128-bit input data for encryption.
-![Example Image](Images/inc1.jpg)
-![Example Image](Images/des1.jpg)
+![Example Image3](Images/inc1.jpg)
+![Example Image4](Images/des1.jpg)
 
 
 ## Acknowledgments
